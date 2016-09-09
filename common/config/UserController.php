@@ -2,10 +2,10 @@
 namespace common\controllers;
 
 use Yii;
-use cchat\base\Res;
-use cchat\base\Controller;
+use wsserver\base\Res;
+use wsserver\base\Controller;
 use common\models\User;
-use cchat\filters\AccessControl;
+use wsserver\filters\AccessControl;
 
 
 /**

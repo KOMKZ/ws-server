@@ -3,7 +3,7 @@ namespace common\datas;
 
 use Yii;
 use yii\base\Object;
-use cchat\redis\ActiveRecord;
+use wsserver\redis\ActiveRecord;
 /**
  *
  */

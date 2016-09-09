@@ -1,25 +1,25 @@
 <?php
 return [
-    'bootstrap' => ['cchat'],
+    'bootstrap' => ['wsserver'],
     'components' => [
         'authManager' => [
             'class' => 'yii\rbac\PhpManager',
         ],
-        'cchat' => [
-            'class' => 'cchat\server\CChat',
+        'wsserver' => [
+            'class' => 'wsserver\server\wsserver',
             'workers' => ['worker', 'gateway', 'register']
         ],
         'req' => [
-            'class' => 'cchat\base\Req'
+            'class' => 'wsserver\base\Req'
         ],
         'msg' => [
-            'class' => 'cchat\base\Msg',
+            'class' => 'wsserver\base\Msg',
         ],
         'user' => [
-            'class' => 'cchat\base\User',
+            'class' => 'wsserver\base\User',
         ],
         'auth' => [
-            'class' => 'cchat\base\Auth',
+            'class' => 'wsserver\base\Auth',
             'roleAssign' => [
                 'admin-role' => ['assignId' => 1, 'summary' => '管理员角色'],
                 'normal-role' => ['assignId' => 2, 'summary' => '一般用户角色'],

@@ -2,10 +2,10 @@
 namespace common\models;
 
 use Yii;
-use cchat\base\IdentityInterface;
+use wsserver\base\IdentityInterface;
 use yii\base\Model;
 use GatewayWorker\Lib\Gateway;
-use cchat\helpers\Curl;
+use wsserver\helpers\Curl;
 
 
 /**

@@ -3,7 +3,7 @@ namespace common\models;
 
 use Yii;
 use yii\base\Model;
-use cchat\base\Res;
+use wsserver\base\Res;
 use common\models\Chanel;
 use common\models\User;
 

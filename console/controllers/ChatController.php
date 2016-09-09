@@ -3,7 +3,7 @@ namespace console\controllers;
 
 use Yii;
 use yii\console\Controller;
-use cchat\base\Worker;
+use wsserver\base\Worker;
 
 /**
  * 聊天服务
@@ -44,22 +44,22 @@ class ChatController extends Controller
      */
     public function actionStart(){
         if($this->regaddr){
-            Yii::$app->cchat->workerConfig = ['registerAddress' => $this->regaddr];
-            Yii::$app->cchat->gatewayConfig = ['registerAddress' => $this->regaddr];
-            Yii::$app->cchat->registerConfig = ['address' => $this->regaddr];
+            Yii::$app->wsserver->workerConfig = ['registerAddress' => $this->regaddr];
+            Yii::$app->wsserver->gatewayConfig = ['registerAddress' => $this->regaddr];
+            Yii::$app->wsserver->registerConfig = ['address' => $this->regaddr];
         }
         if($this->lanip){
-            Yii::$app->cchat->gatewayConfig = ['lanIp' => $this->lanip];
+            Yii::$app->wsserver->gatewayConfig = ['lanIp' => $this->lanip];
         }
-        null === $this->workers ? '' : Yii::$app->cchat->workers = $this->workers;
-        Yii::$app->cchat->run($this->action->id, $this->d);
+        null === $this->workers ? '' : Yii::$app->wsserver->workers = $this->workers;
+        Yii::$app->wsserver->run($this->action->id, $this->d);
     }
     /**
      * 停止聊天服务
      * @return
      */
     public function actionStop(){
-        Yii::$app->cchat->run($this->action->id, $this->d);
+        Yii::$app->wsserver->run($this->action->id, $this->d);
     }
     /**
      * 重启聊天服务
@@ -67,15 +67,15 @@ class ChatController extends Controller
      */
     public function actionRestart(){
         if($this->regaddr){
-            Yii::$app->cchat->workerConfig = ['registerAddress' => $this->regaddr];
-            Yii::$app->cchat->gatewayConfig = ['registerAddress' => $this->regaddr];
-            Yii::$app->cchat->registerConfig = ['address' => $this->regaddr];
+            Yii::$app->wsserver->workerConfig = ['registerAddress' => $this->regaddr];
+            Yii::$app->wsserver->gatewayConfig = ['registerAddress' => $this->regaddr];
+            Yii::$app->wsserver->registerConfig = ['address' => $this->regaddr];
         }
         if($this->lanip){
-            Yii::$app->cchat->gatewayConfig = ['lanIp' => $this->lanip];
+            Yii::$app->wsserver->gatewayConfig = ['lanIp' => $this->lanip];
         }
-        null === $this->workers ? '' : Yii::$app->cchat->workers = $this->workers;
-        Yii::$app->cchat->run($this->action->id, $this->d);
+        null === $this->workers ? '' : Yii::$app->wsserver->workers = $this->workers;
+        Yii::$app->wsserver->run($this->action->id, $this->d);
     }
     /**
      * 重新加载聊天服务
@@ -83,28 +83,28 @@ class ChatController extends Controller
      */
     public function actionReload(){
         if($this->regaddr){
-            Yii::$app->cchat->workerConfig = ['registerAddress' => $this->regaddr];
-            Yii::$app->cchat->gatewayConfig = ['registerAddress' => $this->regaddr];
-            Yii::$app->cchat->registerConfig = ['address' => $this->regaddr];
+            Yii::$app->wsserver->workerConfig = ['registerAddress' => $this->regaddr];
+            Yii::$app->wsserver->gatewayConfig = ['registerAddress' => $this->regaddr];
+            Yii::$app->wsserver->registerConfig = ['address' => $this->regaddr];
         }
         if($this->lanip){
-            Yii::$app->cchat->gatewayConfig = ['lanIp' => $this->lanip];
+            Yii::$app->wsserver->gatewayConfig = ['lanIp' => $this->lanip];
         }
-        null === $this->workers ? '' : Yii::$app->cchat->workers = $this->workers;
-        Yii::$app->cchat->run($this->action->id, $this->d);
+        null === $this->workers ? '' : Yii::$app->wsserver->workers = $this->workers;
+        Yii::$app->wsserver->run($this->action->id, $this->d);
     }
     /**
      * 查看了聊天服务的状态
      * @return
      */
     public function actionStatus(){
-        Yii::$app->cchat->run($this->action->id, $this->d);
+        Yii::$app->wsserver->run($this->action->id, $this->d);
     }
     /**
      * 强制退出聊天服务
      * @return
      */
     public function actionKill(){
-        Yii::$app->cchat->run($this->action->id, $this->d);
+        Yii::$app->wsserver->run($this->action->id, $this->d);
     }
 }

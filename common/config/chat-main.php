@@ -1,43 +1,25 @@
 <?php
 return [
-    'bootstrap' => ['cchat', 'event'],
+    'bootstrap' => ['wsserver'],
     'components' => [
         'authManager' => [
             'class' => 'yii\rbac\PhpManager',
         ],
-        'cchat' => [
-            'class' => 'cchat\server\CChat',
-            'workers' => ['worker', 'gateway', 'register'],
-            'closeNotLogin' => false,
-            'ifClientNoLogin' => ['common\models\User', 'ifClientNoLogin'],
-            'loadRemoteConfig' => true,
-            'remoteConfigCallback' => ['common\models\App', 'loadRemoteConfig'],
-        ],
-        'event' => [
-            'class' => 'cchat\base\Event',
-            'install' => [
-                ['common\models\Chat', 'installEventHandler'],
-                ['common\models\Chanel', 'installEventHandler'],
-            ],
-        ],
-        'redis' => [
-            'class' => 'yii\redis\Connection',
-            'hostname' => 'localhost',
-            'port' => 6379,
-            'database' => 0,
+        'wsserver' => [
+            'class' => 'wsserver\server\WsServer',
+            'workers' => ['worker', 'gateway', 'register']
         ],
         'req' => [
-            'class' => 'cchat\base\Req'
+            'class' => 'wsserver\base\Req'
         ],
         'msg' => [
-            'class' => 'cchat\base\Msg',
+            'class' => 'wsserver\base\Msg',
         ],
         'user' => [
-            'class' => 'cchat\base\User',
-            'identityClass' => 'common\models\User'
+            'class' => 'wsserver\base\User',
         ],
         'auth' => [
-            'class' => 'cchat\base\Auth',
+            'class' => 'wsserver\base\Auth',
             'roleAssign' => [
                 'admin-role' => ['assignId' => 1, 'summary' => '管理员角色'],
                 'normal-role' => ['assignId' => 2, 'summary' => '一般用户角色'],
@@ -45,9 +27,7 @@ return [
             'permissionAssign' => [
                 'admin-role' => "*",
                 'normal-role' => [
-                    'chanel' => [
-                        'join-public-chanel',
-                    ],
+                    'chanel' => ['create-public-chanel'],
                     'user' => "*",
                 ],
             ],

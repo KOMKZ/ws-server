@@ -6,7 +6,7 @@ use yii\base\Model;
 use GatewayWorker\Lib\Gateway;
 use yii\helpers\ArrayHelper;
 use common\models\User;
-use cchat\base\Res;
+use wsserver\base\Res;
 use common\datas\RedisChanel;
 
 /**
