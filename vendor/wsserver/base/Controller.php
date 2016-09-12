@@ -16,7 +16,12 @@ class Controller extends BaseController
     public function say(){
         console("I say, " . $this->id . ':' . $this->action->id, '~');
     }
-
+    public function error($message = null, $data = null){
+        return $this->response($status = Res::STATUS_ERR, $data = null, $message = null);
+    }
+    public function success($data = null, $message = null){
+        return $this->response($status = Res::STATUS_SUCC, $data = null, $message = null);
+    }
     public function response($status = Res::STATUS_SUCC, $data = null, $message = null){
         $res = Res::getRouteRes();
         $res['route'] = Yii::$app->req->route;

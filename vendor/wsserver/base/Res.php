@@ -44,7 +44,7 @@ class Res extends Object
                 'message' => null,
                 'data' => null
             ],
-            'header' => self::getResHeader(),
+            'header' => null,
             'utime' => time(),
         ];
     }
