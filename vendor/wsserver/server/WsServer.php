@@ -300,20 +300,19 @@ class WsServer extends Component implements BootstrapInterface
         Yii::$app->wsserver->chatRun(['clientId' => $clientId, 'body' => $data]);
     }
     public static function onConnect($clientId){
-        printf("new connect:%s\n", $clientId);
-        Yii::$app->req->clientId = $clientId;
-        if(Yii::$app->wsserver->closeNotLogin){
-            $maxFailedTime = Yii::$app->wsserver->getNotLoginTime($_SERVER['REMOTE_ADDR']);
-            if($maxFailedTime >= Yii::$app->wsserver->maxFailedLoginTime){
-                self::warning('当前ip被禁止登录' . $_SERVER['REMOTE_ADDR']);
-                console($clientId, '当前ip被禁止登录', '~');
-                //  todo 这里如果close掉的话，客户端断开重连的话会非常消耗io
-                // 应该在协议层搞死他
-            }else{
-                self::addAuthTimer($clientId);
-                Yii::$app->wsserver->incrementNotLogin($_SERVER['REMOTE_ADDR']);
-            }
-        }
+        // Yii::$app->req->clientId = $clientId;
+        // if(Yii::$app->wsserver->closeNotLogin){
+        //     $maxFailedTime = Yii::$app->wsserver->getNotLoginTime($_SERVER['REMOTE_ADDR']);
+        //     if($maxFailedTime >= Yii::$app->wsserver->maxFailedLoginTime){
+        //         self::warning('当前ip被禁止登录' . $_SERVER['REMOTE_ADDR']);
+        //         console($clientId, '当前ip被禁止登录', '~');
+        //         //  todo 这里如果close掉的话，客户端断开重连的话会非常消耗io
+        //         // 应该在协议层搞死他
+        //     }else{
+        //         self::addAuthTimer($clientId);
+        //         Yii::$app->wsserver->incrementNotLogin($_SERVER['REMOTE_ADDR']);
+        //     }
+        // }
     }
     public function getNotLoginTime($address){
         $key = "failed-login" . $address;

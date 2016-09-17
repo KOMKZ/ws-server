@@ -39,7 +39,9 @@ class Auth extends Component
     }
 
     public function rbacCan($data = []){
+
         $authManager = Yii::$app->authManager;
+
         // get role if there is
         if(array_key_exists('assignId', $data)){
             $this->assignId = $data['assignId'];

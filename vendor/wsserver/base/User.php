@@ -4,6 +4,7 @@ namespace wsserver\base;
 use Yii;
 use yii\base\Component;
 use yii\helpers\ArrayHelper;
+use wsserver\base\IdentityInterface;
 /**
  *
  */
@@ -33,7 +34,7 @@ class User extends Component
         $userInfo = ArrayHelper::merge($this->getRequireAttr(), $identity::getIdentity());
         return $userInfo;
     }
-    
+
 
 
 
@@ -53,11 +54,15 @@ class User extends Component
         return $this->_identityClass;
     }
     public function setIdentityClass($class){
-        if(class_exists($class)){
-            $this->_identityClass = $class;
-        }else{
+        if(!class_exists($class)){
             throw new \Exception("{$class} doesn't exist");
         }
+        $object = new $class();
+        if(!($object instanceof IdentityInterface)){
+            throw new \Exception("{$class} doesn't instanceof wsserver\base\IdentityInterface");
+        }
+        unset($object);
+        $this->_identityClass = $class;
     }
 
 

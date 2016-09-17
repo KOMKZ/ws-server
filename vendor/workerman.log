@@ -7015,3 +7015,178 @@
 2016-09-13 00:11:45 Workerman[./yii] start in DEBUG mode
 2016-09-13 00:13:11 Workerman[yii] Stopping ...
 2016-09-13 00:13:11 Workerman[yii] has been stopped
+2016-09-14 00:08:39 Workerman[./yii] start in DEBUG mode
+2016-09-14 00:10:50 Workerman[yii] Stopping ...
+2016-09-14 00:10:51 Workerman[yii] has been stopped
+2016-09-14 00:10:51 Workerman[./yii] start in DEBUG mode
+2016-09-17 21:44:20 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:16:25 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:16:43 worker[BusinessWorker:4669] exit with status 139
+2016-09-17 22:17:33 Workerman[yii] Stopping ...
+2016-09-17 22:17:33 Workerman[yii] has been stopped
+2016-09-17 22:17:41 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:17:56 worker[BusinessWorker:4695] exit with status 139
+2016-09-17 22:18:16 Workerman[yii] Stopping ...
+2016-09-17 22:18:16 Workerman[yii] has been stopped
+2016-09-17 22:18:19 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:18:36 WORKER EXIT UNEXPECTED 
+2016-09-17 22:18:44 Workerman[yii] Stopping ...
+2016-09-17 22:18:44 Workerman[yii] has been stopped
+2016-09-17 22:18:45 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:18:47 worker[BusinessWorker:4753] exit with status 139
+2016-09-17 22:19:46 Workerman[yii] Stopping ...
+2016-09-17 22:19:46 Workerman[yii] has been stopped
+2016-09-17 22:19:47 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:19:50 worker[BusinessWorker:4780] exit with status 139
+2016-09-17 22:23:38 Workerman[yii] Stopping ...
+2016-09-17 22:23:38 Workerman[yii] has been stopped
+2016-09-17 22:24:49 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:24:57 worker[BusinessWorker:4847] exit with status 139
+2016-09-17 22:25:58 Workerman[yii] Stopping ...
+2016-09-17 22:25:58 Workerman[yii] has been stopped
+2016-09-17 22:25:59 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:26:02 worker[BusinessWorker:4870] exit with status 139
+2016-09-17 22:26:11 worker[BusinessWorker:4872] exit with status 139
+2016-09-17 22:26:13 worker[BusinessWorker:4869] exit with status 139
+2016-09-17 22:26:42 Workerman[yii] Stopping ...
+2016-09-17 22:26:42 Workerman[yii] has been stopped
+2016-09-17 22:26:43 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:27:45 Workerman[yii] Stopping ...
+2016-09-17 22:27:45 Workerman[yii] has been stopped
+2016-09-17 22:27:45 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:27:49 worker[BusinessWorker:4936] exit with status 139
+2016-09-17 22:29:28 worker[BusinessWorker:4945] exit with status 139
+2016-09-17 22:29:35 worker[BusinessWorker:4937] exit with status 139
+2016-09-17 22:29:42 Workerman[yii] Stopping ...
+2016-09-17 22:29:42 Workerman[yii] has been stopped
+2016-09-17 22:29:58 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:29:59 worker[BusinessWorker:4997] exit with status 139
+2016-09-17 22:32:53 Workerman[yii] Stopping ...
+2016-09-17 22:32:54 Workerman[yii] has been stopped
+2016-09-17 22:32:54 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:32:55 worker[BusinessWorker:5045] exit with status 139
+2016-09-17 22:34:15 Workerman[yii] Stopping ...
+2016-09-17 22:34:16 Workerman[yii] has been stopped
+2016-09-17 22:34:17 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:34:18 worker[BusinessWorker:5070] exit with status 139
+2016-09-17 22:34:40 Workerman[yii] Stopping ...
+2016-09-17 22:34:40 Workerman[yii] has been stopped
+2016-09-17 22:34:40 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:34:41 worker[BusinessWorker:5087] exit with status 139
+2016-09-17 22:34:57 Workerman[yii] Stopping ...
+2016-09-17 22:34:57 Workerman[yii] has been stopped
+2016-09-17 22:34:57 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:34:58 worker[BusinessWorker:5100] exit with status 65280
+2016-09-17 22:35:26 Workerman[yii] Stopping ...
+2016-09-17 22:35:26 Workerman[yii] has been stopped
+2016-09-17 22:35:30 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:35:30 WORKER EXIT UNEXPECTED 
+2016-09-17 22:35:30 worker[BusinessWorker:5114] exit with status 64000
+2016-09-17 22:35:33 Workerman[yii] Stopping ...
+2016-09-17 22:35:33 Workerman[yii] has been stopped
+2016-09-17 22:35:42 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:35:43 worker[BusinessWorker:5127] exit with status 139
+2016-09-17 22:36:05 Workerman[yii] Stopping ...
+2016-09-17 22:36:06 Workerman[yii] has been stopped
+2016-09-17 22:36:06 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:36:07 worker[BusinessWorker:5146] exit with status 65280
+2016-09-17 22:36:10 worker[BusinessWorker:5147] exit with status 65280
+2016-09-17 22:36:22 Workerman[yii] Stopping ...
+2016-09-17 22:36:22 Workerman[yii] has been stopped
+2016-09-17 22:36:23 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:36:23 worker[BusinessWorker:5160] exit with status 139
+2016-09-17 22:40:10 Workerman[yii] Stopping ...
+2016-09-17 22:40:10 Workerman[yii] has been stopped
+2016-09-17 22:40:11 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:40:11 WORKER EXIT UNEXPECTED 
+2016-09-17 22:40:11 worker[BusinessWorker:5256] exit with status 64000
+2016-09-17 22:42:07 Workerman[yii] Stopping ...
+2016-09-17 22:42:07 Workerman[yii] has been stopped
+2016-09-17 22:42:08 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:42:08 worker[BusinessWorker:5282] exit with status 65280
+2016-09-17 22:42:45 Workerman[yii] Stopping ...
+2016-09-17 22:42:45 Workerman[yii] has been stopped
+2016-09-17 22:42:46 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:42:46 worker[BusinessWorker:5298] exit with status 65280
+2016-09-17 22:42:50 Workerman[yii] Stopping ...
+2016-09-17 22:42:50 Workerman[yii] has been stopped
+2016-09-17 22:43:24 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:43:25 worker[BusinessWorker:5322] exit with status 65280
+2016-09-17 22:43:28 Workerman[yii] Stopping ...
+2016-09-17 22:43:28 Workerman[yii] has been stopped
+2016-09-17 22:43:29 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:43:29 worker[BusinessWorker:5336] exit with status 65280
+2016-09-17 22:44:33 Workerman[yii] Stopping ...
+2016-09-17 22:44:33 Workerman[yii] has been stopped
+2016-09-17 22:44:34 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:44:35 WORKER EXIT UNEXPECTED 
+2016-09-17 22:44:35 worker[BusinessWorker:5403] exit with status 64000
+2016-09-17 22:45:59 Workerman[yii] Stopping ...
+2016-09-17 22:45:59 Workerman[yii] has been stopped
+2016-09-17 22:46:00 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:46:01 worker[BusinessWorker:5433] exit with status 65280
+2016-09-17 22:46:23 Workerman[yii] Stopping ...
+2016-09-17 22:46:23 Workerman[yii] has been stopped
+2016-09-17 22:46:23 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:46:24 worker[BusinessWorker:5455] exit with status 65280
+2016-09-17 22:46:46 Workerman[yii] Stopping ...
+2016-09-17 22:46:46 Workerman[yii] has been stopped
+2016-09-17 22:46:47 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:46:48 worker[BusinessWorker:5474] exit with status 65280
+2016-09-17 22:46:52 Workerman[yii] Stopping ...
+2016-09-17 22:46:53 Workerman[yii] has been stopped
+2016-09-17 22:47:21 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:47:22 WORKER EXIT UNEXPECTED 
+2016-09-17 22:47:22 worker[BusinessWorker:5493] exit with status 64000
+2016-09-17 22:47:27 Workerman[yii] Stopping ...
+2016-09-17 22:47:27 Workerman[yii] has been stopped
+2016-09-17 22:48:07 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:48:08 worker[BusinessWorker:5515] exit with status 65280
+2016-09-17 22:48:28 Workerman[yii] Stopping ...
+2016-09-17 22:48:28 Workerman[yii] has been stopped
+2016-09-17 22:48:29 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:48:30 worker[BusinessWorker:5539] exit with status 65280
+2016-09-17 22:48:35 Workerman[yii] Stopping ...
+2016-09-17 22:48:35 Workerman[yii] has been stopped
+2016-09-17 22:48:59 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:49:01 worker[BusinessWorker:5558] exit with status 65280
+2016-09-17 22:51:05 Workerman[yii] Stopping ...
+2016-09-17 22:51:06 Workerman[yii] has been stopped
+2016-09-17 22:51:06 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:51:07 WORKER EXIT UNEXPECTED 
+2016-09-17 22:51:07 worker[BusinessWorker:5587] exit with status 64000
+2016-09-17 22:52:04 Workerman[yii] Stopping ...
+2016-09-17 22:52:04 Workerman[yii] has been stopped
+2016-09-17 22:52:06 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:52:06 WORKER EXIT UNEXPECTED 
+2016-09-17 22:52:06 worker[BusinessWorker:5620] exit with status 64000
+2016-09-17 22:52:34 Workerman[yii] Stopping ...
+2016-09-17 22:52:34 Workerman[yii] has been stopped
+2016-09-17 22:52:35 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:52:35 WORKER EXIT UNEXPECTED 
+2016-09-17 22:52:35 worker[BusinessWorker:5642] exit with status 64000
+2016-09-17 22:52:51 Workerman[yii] Stopping ...
+2016-09-17 22:52:51 Workerman[yii] has been stopped
+2016-09-17 22:52:51 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:52:52 WORKER EXIT UNEXPECTED 
+2016-09-17 22:52:52 worker[BusinessWorker:5654] exit with status 64000
+2016-09-17 22:55:06 Workerman[yii] Stopping ...
+2016-09-17 22:55:06 Workerman[yii] has been stopped
+2016-09-17 22:55:07 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:55:08 WORKER EXIT UNEXPECTED 
+2016-09-17 22:55:08 worker[BusinessWorker:5708] exit with status 64000
+2016-09-17 22:55:46 Workerman[yii] Stopping ...
+2016-09-17 22:55:46 Workerman[yii] has been stopped
+2016-09-17 22:55:46 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:55:47 WORKER EXIT UNEXPECTED 
+2016-09-17 22:55:47 worker[BusinessWorker:5734] exit with status 64000
+2016-09-17 22:56:37 Workerman[yii] Stopping ...
+2016-09-17 22:56:37 Workerman[yii] has been stopped
+2016-09-17 22:56:38 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:56:39 WORKER EXIT UNEXPECTED 
+2016-09-17 22:56:39 worker[BusinessWorker:5762] exit with status 64000
+2016-09-17 22:59:44 Workerman[yii] Stopping ...
+2016-09-17 22:59:44 Workerman[yii] has been stopped
+2016-09-17 22:59:45 Workerman[./yii] start in DEBUG mode
+2016-09-17 22:59:47 Workerman[yii] Stopping ...
+2016-09-17 22:59:47 Workerman[yii] has been stopped
