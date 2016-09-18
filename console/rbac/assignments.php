@@ -5,5 +5,9 @@ return [
     ],
     2 => [
         'normal-role',
+        'guest-role',
+    ],
+    3 => [
+        'guest-role',
     ],
 ];

@@ -6,7 +6,7 @@ use common\models\UserModel;
 use wsserver\filters\RbacControl;
 
 /**
- *
+ *@auth:true
  */
 class IndexController extends Controller
 {
@@ -18,7 +18,10 @@ class IndexController extends Controller
             ],
         ];
     }
+    /**
+     * @return [type] [description]
+     */
     public function actionLogin(){
-
+        console('hello world', '~');
     }
 }

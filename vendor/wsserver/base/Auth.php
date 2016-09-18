@@ -20,7 +20,7 @@ class Auth extends Component
     public $assignId = null;
     public $params = null;
 
-    public $signature = null;
+    public $token = null;
     public $data = null;
 
 
@@ -37,67 +37,86 @@ class Auth extends Component
                 return false;
         }
     }
-
-    public function rbacCan($data = []){
-
-        $authManager = Yii::$app->authManager;
-
-        // get role if there is
-        if(array_key_exists('assignId', $data)){
-            $this->assignId = $data['assignId'];
-        }elseif($assignId = Yii::$app->user->getAssignId()){
-            $this->assignId = $assignId;
-        }else{
-            return false;
-        }
+    public function isValidType($type){
+        return in_array($type, [self::AUTH_BY_RBAC, self::AUTH_BY_TOKEN]);
+    }
+    public function getDefaultType(){
+        return self::AUTH_BY_RBAC;
+    }
+    public function setPermission($data = []){
         // get permission if there is
         if(array_key_exists('permission', $data)){
             $this->permission = $data['permission'];
         }elseif(Yii::$app->req->route){
-            $this->permission = preg_replace('/\//',':',Yii::$app->req->route);
+            $this->permission = preg_replace('/\//', ':',Yii::$app->req->route);
         }else{
+            $this->permission = null;
+        }
+    }
+    public function setParams($data = []){
+        if(array_key_exists('params', $data)){
+            $this->params = $data['params'];
+        }else{
+            $this->params = Yii::$app->req->params;
+        }
+    }
+    public function rbacCan($data = []){
+        $authManager = Yii::$app->authManager;
+        $this->setPermission($data);
+        if(!$this->permission){
             return false;
         }
         // 说明这个操作不需要权限控制
         if(!$authManager->getPermission($this->permission)){
             return true;
         }
-        // get params if there is
-        if(array_key_exists('params', $data)){
-            $this->params = $data['params'];
+
+        // get role if there is
+        if($assignId = Yii::$app->user->getAssignId()){
+            $this->assignId = $assignId;
+        }elseif(Yii::$app->user->getIsGuest()){
+            $this->assignId = 3;
         }else{
-            $this->params = Yii::$app->req->params;
+            // todo log
+            return false;
         }
+        // get params if there is
+        $this->setParams($data);
         return $authManager->checkAccess($this->assignId, $this->permission, $this->params);
     }
+    /**
+     * 使用分配token给各个应用客户端， 可以对token进行授权
+     * @param  [type] $data [description]
+     * @return [type]       [description]
+     */
     public function tokenCan($data = []){
-        if(array_key_exists('data', $data)){
-            $this->data = $data['data'];
-        }else{
-            $this->data = Yii::$app->req->sourceData;
+        $authManager = Yii::$app->authManager;
+        $this->setPermission($data);
+        if(!$this->permission){
+            return false;
+        }
+        // 说明这个操作不需要权限控制
+        if(!$authManager->getPermission($this->permission)){
+            return true;
         }
 
-        if(array_key_exists('signature', $data)){
-            $this->signature = $data['signature'];
+        if(array_key_exists('auth_token', Yii::$app->req->header)){
+            $this->token = Yii::$app->req->header['auth_token'];
         }else{
             return false;
         }
 
-        return $this->isValidSignature();
-
+        if($assignId = $this->getTokenAssignId($this->token)){
+            $this->assignId = $assignId;
+        }else{
+            return false;
+        }
+        $this->setParams($data);
+        return $authManager->checkAccess($this->assignId, $this->permission, $this->params);
     }
 
-    public function isValidSignature(){
-        if(!Yii::$app->wsserver->secretKey){
-            throw new \Exception('secretKey没有设置');
-        }
-        $jsonData = json_encode($this->data);
-        if(!empty($this->jsonData)){
-            $signature = sha1(md5($this->jsonData) . Yii::$app->wsserver->secretKey);
-            return $this->signature === $signature;
-        }else{
-            return false;
-        }
+    protected function getTokenAssignId($token){
+        return 1;
     }
 
 
