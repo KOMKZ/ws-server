@@ -29,6 +29,8 @@ class User extends Component
     public function setProtectedAttr($attrs){
         $this->_protectedAttr = $attrs;
     }
+
+
     public function getIdentity(){
         $identity = $this->_identityClass;
         $userInfo = ArrayHelper::merge($this->getRequireAttr(), $identity::getIdentity());

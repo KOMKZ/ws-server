@@ -16,7 +16,19 @@ class RbacControl extends ActionFilter
         if(array_key_exists('auth_type', Yii::$app->req->header) && $auth->isValidType(Yii::$app->req->header['auth_type'])){
             $auth->type = Yii::$app->req->header['auth_type'];
         }else{
-            $auth->type = $auth->getDefaultType();
+            $res = Res::getRouteRes();
+            $res['route'] = Yii::$app->req->route;
+            $res['body'] = [
+                'status' => Res::STATUS_ERR,
+                'data' => null,
+                'message' => [
+                    [
+                        'something wrong in procession of auth, auth_type:' . Yii::$app->req->header['auth_type']
+                    ]
+                ]
+            ];
+            Res::sendToCurrent($res);
+            return false;
         }
         $can = $auth->can();
         if(!$can){

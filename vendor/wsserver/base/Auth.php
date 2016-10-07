@@ -3,14 +3,16 @@ namespace wsserver\base;
 
 use Yii;
 use yii\base\Component;
+
 /**
- *
+ * 各种can方式应该独立出去，本类提供add方法，要不台耦合了。
  */
 class Auth extends Component
 {
     const AUTH_BY_RBAC = 'rbac';
     CONST AUTH_BY_TOKEN = 'token';
     public $type = 'rbac';
+    public $defaultAssignId = null;
 
     public $roleAssign = [];
     public $permissionAssign = [];
@@ -23,7 +25,11 @@ class Auth extends Component
     public $token = null;
     public $data = null;
 
-
+    /**
+     * 1. 注意执行到这一步说明用户肯定是指定了该方法的，所以方法的名称是必须带过来的。
+     * @param  [type] $data [description]
+     * @return [type]       [description]
+     */
     public function can($data = []){
         switch ($this->type) {
             case self::AUTH_BY_RBAC:
@@ -63,10 +69,15 @@ class Auth extends Component
     public function rbacCan($data = []){
         $authManager = Yii::$app->authManager;
         $this->setPermission($data);
+        /**
+         * cant find the route but route is required
+         */
         if(!$this->permission){
             return false;
         }
-        // 说明这个操作不需要权限控制
+        /**
+         * indacate that the route can be accessed public
+         */
         if(!$authManager->getPermission($this->permission)){
             return true;
         }
@@ -74,8 +85,8 @@ class Auth extends Component
         // get role if there is
         if($assignId = Yii::$app->user->getAssignId()){
             $this->assignId = $assignId;
-        }elseif(Yii::$app->user->getIsGuest()){
-            $this->assignId = 3;
+        }elseif(Yii::$app->user->getIsGuest() && null !== $this->defaultAssignId){
+            $this->assignId = $this->defaultAssignId;
         }else{
             // todo log
             return false;
